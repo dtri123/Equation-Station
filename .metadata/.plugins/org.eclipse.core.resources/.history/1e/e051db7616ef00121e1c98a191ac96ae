@@ -1,0 +1,47 @@
+package com.example.theequationstation;
+
+import com.example.theequationstation.R;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.*;
+import android.widget.*;
+
+
+public class Addition_Page extends Activity {
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.addition_page);
+        Button btn = (Button)findViewById(R.id.button_add);
+        btn.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v) {
+        		EditText et1 = (EditText)findViewById(R.id.editText1);
+        	    String txt1 = et1.getText().toString();
+        	    EditText et2 = (EditText)findViewById(R.id.editText2);
+        	    String txt2 = et2.getText().toString();
+        	    EditText et3 = (EditText)findViewById(R.id.editText3);
+        	    String txt3 = et3.getText().toString();
+        	    
+        	    RadioGroup rg = (RadioGroup)findViewById(R.id.group1);
+        	    RadioButton rb_A = (RadioButton)findViewById(R.id.radioButtonA);
+        	    boolean find_A = rb_A.isChecked();
+        	    RadioButton rb_B = (RadioButton)findViewById(R.id.radioButtonB);
+        	    boolean find_B = rb_B.isChecked();
+        	    RadioButton rb_Sum = (RadioButton)findViewById(R.id.radioButtonSum);
+        	    boolean find_Sum = rb_Sum.isChecked();
+        	    Equations equation = new Equations();
+        	    double a = equation.convertToDouble(txt1);
+        	    double b = equation.convertToDouble(txt2);
+        	    double sum = equation.convertToDouble(txt3);
+        	    double result = equation.add(a, b, sum, find_A, find_B, find_Sum);
+                //TextView tw = (TextView)findViewById(R.id.textView2);
+                //tw.setText(result+"");
+        	    if( find_A ) et1.setText(result+"");
+        	    else if( find_B ) et2.setText(result+"");
+        	    else if( find_Sum ) et3.setText(result+"");
+        	}
+        });
+
+    }
+}
