@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+C:\Users\DUCAStudent\Documents\GitHub\Equation-Station\.metadata\.plugins\org.eclipse.jdt.core
+1602889988.index
+628365995.index
+3369207374.index
