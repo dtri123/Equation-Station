@@ -31,7 +31,7 @@ public class Equations {
 	
 	public double divide(double a, double b, double dividend, boolean find_A, boolean find_B, boolean find_Dividend){
 		if( find_Dividend ) return a/b;
-		else if( find_B ) return a*dividend;
+		else if( find_B ) return a/dividend;
 		else if( find_A ) return b*dividend;
 		else return 0;
 	}

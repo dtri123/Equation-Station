@@ -12,14 +12,14 @@ public class Subtraction_Page extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.subtraction_page);
-        Button btn = (Button)findViewById(R.id.button_subtract);
+        Button btn = (Button)findViewById(R.id.subtract_button);
         btn.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
-        		EditText et1 = (EditText)findViewById(R.id.editText_A);
+        		EditText et1 = (EditText)findViewById(R.id.editText_SubA);
         	    String a_txt = et1.getText().toString();
-        	    EditText et2 = (EditText)findViewById(R.id.editText_B);
+        	    EditText et2 = (EditText)findViewById(R.id.editText_SubB);
         	    String b_txt = et2.getText().toString();
-        	    EditText et3 = (EditText)findViewById(R.id.editText_Diff);
+        	    EditText et3 = (EditText)findViewById(R.id.editText_SubDiff);
         	    String diff_txt = et3.getText().toString();
         	    
         	    RadioGroup rg = (RadioGroup)findViewById(R.id.group1);
@@ -28,7 +28,7 @@ public class Subtraction_Page extends Activity {
         	    RadioButton rb_B = (RadioButton)findViewById(R.id.radioButtonSubB);
         	    boolean find_B = rb_B.isChecked();
         	    RadioButton rb_Diff = (RadioButton)findViewById(R.id.radioButtonDiff);
-        	    boolean find_Diff = rb_Diff.isChecked()
+        	    boolean find_Diff = rb_Diff.isChecked();
         	    
         	    Equations equation = new Equations();
         	    
@@ -43,6 +43,5 @@ public class Subtraction_Page extends Activity {
         	    else if( find_Diff ) et3.setText(result+"");
         	}
         });
-        }
 	}
 }

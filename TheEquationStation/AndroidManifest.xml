@@ -16,11 +16,11 @@
    <activity
             android:name="com.example.theequationstation.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
+  <!--          <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity
             android:name="com.example.theequationstation.Addition_Page"
@@ -30,6 +30,33 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.example.theequationstation.Subtraction_Page"
+            android:label="@string/app_name" >
+  <!--      <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity 
+            android:name="com.example.theequationstation.Multiplication_Page"
+            android:label="@string/app_name" >
+ <!--      <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.example.theequationstation.Division_Page"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
